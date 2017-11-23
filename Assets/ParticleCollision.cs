@@ -8,7 +8,7 @@ public class ParticleCollision : MonoBehaviour {
 	GameObject Parent;
 	void OnCollisionEnter(Collision collider)
 	{
-		//print ( collider.gameObject.name);
+		print ( collider.gameObject.name);
 		if (collider.gameObject.tag == "Weapon") {
 			Parent = collider.gameObject;
 			for (int i = 0; i < 1000; i++) {

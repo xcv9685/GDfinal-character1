@@ -46,7 +46,7 @@ public class FriendDetect : MonoBehaviour {
 						}
 						else if (AttackType == 1) {
 							animator.SetTrigger ("Attack1");
-							GameObject.Find ("ParticleManager").GetComponent<ParticleManager> ().MagicFrameBall (this.transform);
+							GameObject.Find ("ParticleManager").GetComponent<ParticleManager> ().MagicFrameBall (this.transform,enemy.transform.position);
 						}
 						attackCounter = 0;
 					} else {

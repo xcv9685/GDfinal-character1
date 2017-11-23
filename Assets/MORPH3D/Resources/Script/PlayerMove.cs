@@ -84,9 +84,9 @@ public class PlayerMove : MonoBehaviour {
 		if (currentState.IsName ("Idle") || currentState.IsName ("Locomotion") || currentState.IsName ("WalkBack")) {
 			MagicAttackFlag = 1;
 		}
-		if (currentState.IsName ("Attack2") && MagicAttackFlag == 1) {
+		/*if (currentState.IsName ("Attack2") && MagicAttackFlag == 1) {
 			GameObject.Find ("ParticleManager").GetComponent<ParticleManager> ().MagicFrameBall (this.transform);
 			MagicAttackFlag = 0;
-		}
+		}*/
 	}
 }

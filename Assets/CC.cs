@@ -20,6 +20,7 @@ public class CC : MonoBehaviour {
 	}
 
 	public void cc(){
+		print ("hihi");
 		currentCameraIndex ++;
 		Debug.Log ("C button has been pressed. Switching to the next camera");
 			if (currentCameraIndex < cameras.Length) {

@@ -45,13 +45,18 @@ public class ParticleManager : MonoBehaviour {
 		particle.GetComponent <ParticleSystem> ().Play ();
 
 	}
-	public void MagicFrameBall(Transform pos){
+	public void MagicFrameBall(Transform pos,Vector3  enemyPos){
 		/*particle = GameObject.Instantiate (Resources.Load ("frameball") as GameObject);
 		particle.transform.position = new Vector3 (pos.position.x, pos.position.y+2f, pos.position.z)+pos.forward;
 		print (pos.forward);*/
-		particle=Instantiate(particle4,new Vector3 (pos.position.x, pos.position.y+1.2f, pos.position.z)+pos.forward,transform.rotation);
+		particle=Instantiate(particle4,new Vector3 (pos.position.x, pos.position.y+1.2f, pos.position.z)+pos.forward*2,transform.rotation);
 		particle.SetActive (true);
-		particle.GetComponent<Rigidbody> ().AddForce (pos.forward*600);
+		//particle.GetComponent<Rigidbody> ().AddForce (pos.forward*600);
+		print(enemyPos);
+		print(pos.position);
+		print((enemyPos - pos.position).normalized);
+		particle.GetComponent<Rigidbody> ().velocity=(enemyPos - particle.transform.position).normalized * 10;
+
 
 	}
 	public void MagicFrameBallCollision(Transform pos){

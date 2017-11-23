@@ -10,7 +10,7 @@ public class warehouse : MonoBehaviour {
 		wcanv = transform.Find ("WarehouseCanvas").gameObject;
 	}
 	void Update(){
-		if (Input.GetButtonDown ("open"))
+		if (Input.GetButtonDown ("open") && canvas.activeSelf==true)
 			WarehouseBtn ();
 		if (Input.GetKeyDown (KeyCode.Escape) && wcanv.activeSelf) {
 			WarehouseCancelBtn ();
